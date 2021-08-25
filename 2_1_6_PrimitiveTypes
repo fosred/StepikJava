@@ -1,0 +1,18 @@
+public static boolean booleanExpression(boolean a, boolean b, boolean c, boolean d) {
+        boolean box[] = {a,b,c,d};
+        boolean tmp;
+        boolean count = false;
+        int ver = 0;
+        for (int i=0; i < 4; i++){
+        tmp = box[i];
+        if(tmp==true){
+            ++ver;
+            if(ver == 2){
+            count = true;
+                } else {
+                    count = false;
+                }
+            }
+        }
+    return count;    
+    }
