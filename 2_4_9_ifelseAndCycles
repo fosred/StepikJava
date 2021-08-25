@@ -1,0 +1,24 @@
+public static int[] mergeArrays(int[] a1, int[] a2) {
+    int[] a3 = new int[a1.length + a2.length];
+        for (int i =0,k=0, s =0; s < (a1.length + a2.length); s++){
+            if (i> a1.length -1){
+                a3[s]=a2[k];
+                k++;
+
+            }
+            else if(k>a2.length -1){
+                a3[s]=a1[i];
+                i++;
+            }
+            else if (a1[i] > a2[k]) {
+                a3[s] = a2[k];
+                k++;
+            }
+
+            else {
+                a3[s] = a1[i];
+                i++;
+            }
+        }
+    return a3;
+}
