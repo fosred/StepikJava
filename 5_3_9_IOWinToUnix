@@ -1,0 +1,22 @@
+import java.io.IOException;
+import java.io.*;
+
+
+public class HelloAmigo {
+    public static void main(String[] args) throws IOException {
+        int x = System.in.read();
+        if (x != -1) {
+            while (x != -1) {
+                int y = System.in.read();
+                if (x != 13 || y != 10) {
+                    System.out.write(x);
+
+                }
+                x = y;
+            }
+        } else {
+            System.out.flush();
+        }
+        System.out.flush();
+    }
+}
